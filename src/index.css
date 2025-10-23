@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hasbara-red: #e63946;
+  --color-orwell-dark: #1a1a1a;
+  --color-orwell-gray: #2d2d2d;
+  --color-orwell-light: #cccccc;
+  
+  --font-mono: 'Courier New', monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-orwell-dark);
+    color: var(--color-orwell-light);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    color: white;
+  }
+
+  a {
+    transition-property: color;
+    transition-duration: 200ms;
+  }
+}
+
+@layer components {
+  .orwell-quote {
+    @apply font-mono text-lg md:text-xl italic border-l-4 border-hasbara-red pl-4 my-6;
+  }
+
+  .btn-primary {
+    @apply bg-hasbara-red text-white px-6 py-3 rounded hover:bg-red-700 transition-all duration-300 font-semibold tracking-wide;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-orwell-light text-orwell-light px-6 py-3 rounded hover:bg-orwell-light hover:text-orwell-dark transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-orwell-gray p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .nav-link {
+    @apply text-orwell-light hover:text-hasbara-red transition-colors duration-200 font-medium;
+  }
+
+  .page-container {
+    @apply min-h-screen pt-20 pb-12 px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-white;
+  }
+}
+
+/* Custom animations */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch-text:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Typewriter effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
