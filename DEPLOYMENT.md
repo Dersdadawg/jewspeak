@@ -34,7 +34,7 @@ export default defineConfig({
    git add .
    git commit -m "Initial commit: The Ministry of Hasbara"
    git branch -M main
-   git remote add origin https://github.com/yourusername/your-repo-name.git
+   git remote add origin https://github.com/Dersdadawg/jewspeak.git
    git push -u origin main
    ```
 
