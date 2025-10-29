@@ -4,8 +4,8 @@ export const languageExamples = [
     id: 1,
     hasbaraTerm: "Precision Strike",
     orwellEquivalent: "Selective Bombing",
-    realMeaning: "Bombing campaign that kills civilians alongside claimed military targets",
-    explanation: "This euphemism reframes aerial bombardment as surgical and careful, obscuring civilian casualties and widespread destruction."
+    realMeaning: "Bombing campaigns that kill civilians alongside claimed military targets",
+    explanation: "This euphemism reframes aerial bombardment by the IDF as surgical and careful, to convince the international community of the Israeli army's morality, while not accurately the degree of civilian destruction wreaked."
   },
   {
     id: 2,
@@ -16,16 +16,16 @@ export const languageExamples = [
   },
   {
     id: 3,
-    hasbaraTerm: "Mowing the Lawn",
+    hasbaraTerm: "Mowing the Lawn (Hebrew: כיסוח דשא)",
     orwellEquivalent: "Periodic Military Operations",
     realMeaning: "Recurring military campaigns against Gaza's population",
-    explanation: "Reduces human lives to weeds to be periodically eliminated, normalizing cyclical violence."
+    explanation: "Adam Taylor of the Washington Post states that \"the phrase implies the Palestinian militants in the Gaza Strip and their supply of crude but effective homemade weapons are like weeds that need to be cut back."\"
   },
   {
     id: 4,
     hasbaraTerm: "The Only Democracy in the Middle East",
     orwellEquivalent: "Democratic State",
-    realMeaning: "Democracy for Jewish citizens while millions live under military occupation",
+    realMeaning: "Democracy for Jewish citizens while millions live under military occupation: definition of an apartheid state",
     explanation: "Emphasizes democratic institutions for some while obscuring the reality of occupation and apartheid conditions."
   },
   {
@@ -33,21 +33,21 @@ export const languageExamples = [
     hasbaraTerm: "Self-Defense",
     orwellEquivalent: "Military Response",
     realMeaning: "Military operations in occupied territory against an occupied population",
-    explanation: "Frames actions of an occupying power as defensive, reversing the actual power dynamic."
+    explanation: "Frames actions of an occupying power as defensive, reversing the actual power dynamic. Can also connect it with the David vs. Goliath myth that Israel always evokes."
   },
   {
     id: 6,
     hasbaraTerm: "Disputed Territories",
     orwellEquivalent: "Occupied Land",
     realMeaning: "Palestinian land under Israeli military control, recognized as occupied by international law",
-    explanation: "Creates false equivalence and uncertainty about internationally recognized occupation."
+    explanation: "Creates a false equivalency and uncertainty about occupation recognized by international bodies."
   },
   {
     id: 7,
-    hasbaraTerm: "Neighborhood Procedure",
+    hasbaraTerm: "Neighbor Procedure",
     orwellEquivalent: "Using Civilians as Human Shields",
     realMeaning: "Forcing Palestinian civilians to enter homes before soldiers during raids",
-    explanation: "Bureaucratic language that obscures the practice of using civilians to reduce risk to soldiers."
+    explanation: "Bureaucratic language that obscures the practice of using civilians to reduce risk to soldiers. Condemned by Israeli supreme court in 2005, but has resurfaced under this more innocent name. "
   },
   {
     id: 8,
@@ -55,6 +55,13 @@ export const languageExamples = [
     orwellEquivalent: "Imprisonment Without Trial",
     realMeaning: "Indefinite detention of Palestinians without charges or trial",
     explanation: "Clinical term that normalizes imprisonment without due process."
+  },
+  {
+    id: 9,
+    hasbaraTerm: "Israeli Hostages vs. Palestinian Prisoners",
+    orwellEquivalent: "Goodthink vs. Badthink",
+    realMeaning: "Hostage implies detention against one's will, prisoner implies detention through legal means",
+    explanation: "Through this markedly different language, hasbarists are attempting to stir up sympathy for Israeli hostages, while deligitimising Palestinian detainees."
   }
 ];
 
@@ -63,76 +70,105 @@ export const mediaExamples = [
   {
     id: 1,
     platform: "Twitter/X",
-    theme: "Humanitarian Framing",
-    caption: "Israel sends medical aid trucks to Gaza civilians while Hamas hides weapons in hospitals",
-    explanation: "Juxtaposes claimed humanitarian action with accusation against Hamas, creating a moral contrast while omitting context of blockade and overall destruction.",
-    emotionalAppeal: "Compassion",
-    omissions: "Scale of destruction, blockade conditions, verification of claims"
+    theme: "Precision Strike Framing",
+    caption: "This was a precise strike on a single building used by Hamas as a command and control center.",
+    explanation: "Uses 'precise/precision' to imply legality and minimal harm; shifts focus from blast effects to target legitimacy.",
+    emotionalAppeal: "Reassurance, authority",
+    omissions: "Independent verification, civilian impact, damage radius",
+    link: "https://x.com/IsraelMFA/status/1911528004825833507"
   },
   {
     id: 2,
-    platform: "Instagram",
-    theme: "Victimhood Framing",
-    caption: "Never Again means we will defend ourselves. 🇮🇱 #October7 #NeverForget",
-    explanation: "Invokes Holocaust trauma to justify current military actions, positioning Israel as perpetual victim despite being the dominant military power.",
-    emotionalAppeal: "Historical trauma, fear",
-    omissions: "Context of occupation, power asymmetry, Palestinian casualties"
+    platform: "Twitter/X",
+    theme: "Hospital-as-Base Narrative",
+    caption: "Hamas built an underground terrorist infrastructure site RIGHT UNDER the European Hospital in Khan Yunis.",
+    explanation: "Asserts military use of hospitals to justify strikes near/at medical facilities and pre-empt criticism.",
+    emotionalAppeal: "Moral clarity, outrage",
+    omissions: "Third-party corroboration, full site maps, patient impact",
+    link: "https://x.com/cogatonline/status/1922325246125695262"
   },
   {
     id: 3,
-    platform: "TikTok",
+    platform: "Twitter/X",
     theme: "Defensive Framing",
-    caption: "What would your country do if thousands of rockets were fired at your cities?",
-    explanation: "Rhetorical question that presents Israeli actions as inevitable and reasonable, while removing all context of occupation and blockade.",
-    emotionalAppeal: "Empathy through hypothetical",
-    omissions: "Military occupation, power imbalance, root causes"
+    caption: "The IDF conducted a precise strike in Nuseirat targeting an Islamic Jihad terrorist.",
+    explanation: "Positions action as narrowly defensive and necessary; centers on the target’s identity rather than collateral effects.",
+    emotionalAppeal: "Security, necessity",
+    omissions: "Casualty details, proportionality, context of ongoing operations",
+    link: "https://x.com/IDF/status/1982139424109396444"
   },
   {
     id: 4,
     platform: "Twitter/X",
-    theme: "Dehumanization",
-    caption: "IDF eliminates terrorist cell planning attacks on Israeli civilians",
-    explanation: "Uses 'eliminates' and 'terrorist cell' to dehumanize victims and justify killings without evidence or trial.",
-    emotionalAppeal: "Fear, security",
-    omissions: "Identity of victims, evidence, civilian status, due process"
+    theme: "Humanitarian Framing",
+    caption: "Hundreds of aid trucks are inside Gaza; the UN refuses to distribute.",
+    explanation: "Shifts blame for suffering onto international bodies, highlighting Israeli facilitation while obscuring access constraints.",
+    emotionalAppeal: "Compassion, indignation",
+    omissions: "Crossing capacity, security restrictions, distribution conditions",
+    link: "https://x.com/RonKatz3" 
   },
   {
     id: 5,
-    platform: "Instagram",
-    theme: "Moral Superiority",
-    caption: "While Hamas teaches children to hate, Israel educates for peace and coexistence",
-    explanation: "Creates binary moral framework that portrays Israel as civilized and Palestinians as barbaric, ignoring Israeli military education and occupation.",
-    emotionalAppeal: "Cultural superiority",
-    omissions: "Israeli military education, occupation's impact on children, Palestinian peace efforts"
+    platform: "Twitter/X",
+    theme: "Humanitarian vs. Enemy Depravity",
+    caption: "All condemnations should be directed at Hamas, which hides in hospitals and behind civilians.",
+    explanation: "Contrasts Israeli claims of restraint with the enemy’s alleged war crimes to claim moral high ground.",
+    emotionalAppeal: "Moral superiority, protection of civilians",
+    omissions: "Independent investigations, specific evidence per incident",
+    link: "https://x.com/actforisrael"
   },
   {
     id: 6,
-    platform: "Facebook",
-    theme: "False Equivalence",
-    caption: "Both sides have suffered. It's time for both sides to want peace.",
-    explanation: "Implies equal responsibility and equal suffering, obscuring the massive power imbalance and asymmetric casualties.",
-    emotionalAppeal: "Desire for neutrality",
-    omissions: "Power dynamics, casualty ratios, occupation status"
+    platform: "Twitter/X",
+    theme: "Evacuation Warnings as Evidence of Care",
+    caption: "IDF Arabic-language spokesman publishes maps ordering evacuations of Gaza neighborhoods.",
+    explanation: "Public evacuation maps portray operational care to minimize harm, supporting legality narratives.",
+    emotionalAppeal: "Responsibility, orderliness",
+    omissions: "Feasibility of evacuation, safe routes, repeated displacement effects",
+    link: "https://x.com/manniefabian/status/1929571382586716377"
   },
   {
     id: 7,
     platform: "Twitter/X",
-    theme: "Evidence Manipulation",
-    caption: "Satellite images prove Hamas command center under hospital",
-    explanation: "Presents images as definitive proof without independent verification, using technology's authority to legitimize claims.",
-    emotionalAppeal: "Trust in technology",
-    omissions: "Independent verification, alternative explanations, track record of false claims"
+    theme: "Evidence by Visual Authority",
+    caption: "IDF releases footage showing Hamas tunnel network beneath European Hospital.",
+    explanation: "Leverages technical imagery to imply conclusive proof; audiences may infer verification from visuals alone.",
+    emotionalAppeal: "Trust in technology, certainty",
+    omissions: "Methodology, geolocation/temporal verification, independent review",
+    link: "https://x.com/Jerusalem_Post/status/1931405009649840382"
   },
   {
     id: 8,
     platform: "Instagram",
-    theme: "Strawman Argument",
-    caption: "Anti-Zionism is antisemitism. To deny Israel's right to exist is to call for another Holocaust.",
-    explanation: "Conflates criticism of state policy with racism, shutting down legitimate political discourse.",
-    emotionalAppeal: "Fear of antisemitism",
-    omissions: "Distinction between state critique and racism, Jewish anti-Zionist voices"
+    theme: "Victimhood/Holocaust Memory Linkage",
+    caption: "“Never Again is not a slogan.” #October7 #NeverForget",
+    explanation: "Invokes Holocaust memory to frame present military posture as existential self-defense.",
+    emotionalAppeal: "Historical trauma, fear",
+    omissions: "Occupation context, casualty asymmetry, timeline of events",
+    link: "https://www.instagram.com/p/DOPYd7mDhks/"
+  },
+  {
+    id: 9,
+    platform: "Twitter/X",
+    theme: "Kill-Action Sanitization",
+    caption: "2 terrorists with RPGs identified & eliminated in a precise strike. WATCH.",
+    explanation: "Uses sanitized verbs ('eliminated') and 'precise' to normalize lethal force as technical and clean.",
+    emotionalAppeal: "Safety, competence",
+    omissions: "Bystander risk, post-strike assessment, due process",
+    link: "https://x.com/IDF/status/1974037568820781113"
+  },
+  {
+    id: 10,
+    platform: "App / Multi-platform",
+    theme: "Coordinated Online Campaigns",
+    caption: "Act.IL provides daily ‘missions’ to report, share, and amplify pro-Israel content across platforms.",
+    explanation: "Mobilizes decentralized users to shape feeds, comments, and visibility—an organized form of narrative management.",
+    emotionalAppeal: "Participation, community action",
+    omissions: "Astroturfing concerns, transparency on funding/targets",
+    link: "https://www.abbaeban.runi.ac.il/act-il"
   }
 ];
+
 
 // Interactive Quiz Data
 export const quizData = [
