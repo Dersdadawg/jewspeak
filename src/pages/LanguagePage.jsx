@@ -78,7 +78,7 @@ export default function LanguagePage() {
 
           <div className="orwell-quote mb-12">
             <EditableText
-              value="Don't you see that the whole aim of Newspeak is to narrow the range of thought? In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it.'t you see that the whole aim of Newspeak is to narrow the range of thought? In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it.'t you see that the whole aim of Newspeak is to narrow the range of thought? In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it."
+              value="Don't you see that the whole aim of Newspeak is to narrow the range of thought? In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it."
               storageKey="language-quote"
               className="block"
               tag="div"
@@ -89,7 +89,8 @@ export default function LanguagePage() {
           <div className="mb-12 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
               <EditableText
-                value="Wittgenstein said \"the limits of my language mean the limits of my world.\"\nNewspeak was designed to enforce these limits and make certain thoughts (or thoughtcrimes) impossible to think (or commit). Hasbara and modern propaganda, however, is different in how it operates. Hasbarists do not seek to eliminate entire words from usage. However, they subtly change their meaning and encode a pro-Israel bias within them."the limits of my language mean the limits of my world.\"\nNewspeak was designed to enforce these limits and make certain thoughts (or thoughtcrimes) impossible to think (or commit). Hasbara and modern propaganda, however, is different in how it operates. Hasbarists do not seek to eliminate entire words from usage. However, they subtly change their meaning and encode a pro-Israel bias within them.'t eliminate words—it changes what they mean."
+                value={String.raw`Wittgenstein said "the limits of my language mean the limits of my world."
+Newspeak was designed to enforce these limits and make certain thoughts (or thoughtcrimes) impossible to think (or commit). Hasbara and modern propaganda, however, is different in how it operates. Hasbarists do not seek to eliminate entire words from usage. However, they subtly change their meaning and encode a pro-Israel bias within them.`}
                 storageKey="language-intro-1"
                 className="text-orwell-light"
                 tag="span"
@@ -97,7 +98,7 @@ export default function LanguagePage() {
             </p>
             <p className="mb-4">
               <EditableText
-                value="Specifically, hasbara employs euphemisms, reframings, and loaded language to justify their genocide.'conflict.'"
+                value="Specifically, hasbara employs euphemisms, reframings, and loaded language to justify their genocide."
                 storageKey="language-intro-2"
                 className="text-orwell-light"
                 tag="span"
@@ -166,7 +167,7 @@ export default function LanguagePage() {
             <h3 className="text-xl font-bold mb-3 text-hasbara-red">💡 The Power of Language</h3>
             <p className="text-orwell-light">
               <EditableText
-                value="A key trick hasbarists have up their sleeves is calling out any opposition and labelling it \"antisemitism.\" We can compare this with Orwell's concept of Thoughtcrime in 1984, where even thinking something contrary to the party doctrine can land you in jail. Some are refusing to speak out against the Israeli government's genocide for fear of being labelled as an antisemite, but if that's the case, they've already won."antisemitism.\" We can compare this with Orwell's concept of Thoughtcrime in 1984, where even thinking something contrary to the party doctrine can land you in jail. Some are refusing to speak out against the Israeli government's genocide for fear of being labelled as an antisemite, but if that's the case, they've already won.'t just about lying. It's about controlling the terms of debate. If you can make people say 'conflict' instead of 'occupation,' 'disputed territories' instead of 'stolen land,' and 'human shields' instead of 'civilians,' you've already won. The question isn't 'Is Israel defending itself?'—the question is 'Why are these the only words we're allowed to use?'"
+                value={String.raw`A key trick hasbarists have up their sleeves is calling out any opposition and labelling it "antisemitism." We can compare this with Orwell's concept of Thoughtcrime in 1984, where even thinking something contrary to the party doctrine can land you in jail. Some are refusing to speak out against the Israeli government's genocide for fear of being labelled as an antisemite, but if that's the case, they've already won.`}
                 storageKey="language-insight"
                 className="text-orwell-light"
                 tag="span"
