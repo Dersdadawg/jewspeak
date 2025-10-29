@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useEditMode } from '../contexts/EditModeContext';
-import { saveContent, loadContent } from '../services/contentService';
+import { useContent } from '../contexts/ContentContext';
 
 export default function EditableText({ 
   value: initialValue, 
@@ -12,19 +12,27 @@ export default function EditableText({
   ...props 
 }) {
   const { isEditMode } = useEditMode();
+  const { getContent, updateContent, loadContentForKey, isLoading: contextLoading, content } = useContent();
   const [value, setValue] = useState(initialValue);
   const [isEditing, setIsEditing] = useState(false);
   const [tempValue, setTempValue] = useState(initialValue);
   const [isLoading, setIsLoading] = useState(false);
   const textareaRef = useRef(null);
 
-  // Load saved value from Firestore if storageKey is provided
+  // Load saved value from global context or Firestore if storageKey is provided
   useEffect(() => {
     const loadSavedValue = async () => {
       if (storageKey) {
         setIsLoading(true);
         try {
-          const saved = await loadContent(storageKey);
+          // First check global context directly
+          let saved = content[storageKey];
+          
+          // If not in context, try loading it
+          if (!saved) {
+            saved = await loadContentForKey(storageKey);
+          }
+          
           if (saved) {
             setValue(saved);
             setTempValue(saved);
@@ -46,7 +54,19 @@ export default function EditableText({
     };
     
     loadSavedValue();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialValue, storageKey]);
+
+  // Subscribe to global content changes for this storageKey
+  useEffect(() => {
+    if (storageKey) {
+      const globalValue = content[storageKey];
+      if (globalValue && globalValue !== value && !isEditing) {
+        setValue(globalValue);
+        setTempValue(globalValue);
+      }
+    }
+  }, [storageKey, content, value, isEditing]);
 
   // Auto-resize textarea
   useEffect(() => {
@@ -67,13 +87,9 @@ export default function EditableText({
     setValue(tempValue);
     setIsEditing(false);
     
-    // Save to Firestore if storageKey is provided
+    // Update global context (which also saves to Firestore/localStorage)
     if (storageKey) {
-      try {
-        await saveContent(storageKey, tempValue);
-      } catch (error) {
-        console.error('Error saving content:', error);
-      }
+      await updateContent(storageKey, tempValue);
     }
     
     // Call parent's onSave if provided
@@ -96,7 +112,7 @@ export default function EditableText({
   };
 
   if (!isEditMode) {
-    return <Tag className={className} {...props}>{isLoading ? 'Loading...' : value}</Tag>;
+    return <Tag className={className} {...props}>{isLoading || contextLoading ? 'Loading...' : value}</Tag>;
   }
 
   if (isEditing) {

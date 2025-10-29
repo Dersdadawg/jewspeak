@@ -1,4 +1,4 @@
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
 /**
@@ -70,27 +70,34 @@ export async function loadContent(storageKey) {
 }
 
 /**
- * Load all content entries from Firestore
- * @returns {Promise<Object>} - Object with all content entries
+ * Subscribe to real-time updates for all content
+ * @param {function} callback - Function called with content object whenever content changes
+ * @returns {function} - Unsubscribe function
  */
-export async function loadAllContent() {
+export function subscribeToContentUpdates(callback) {
+  if (!isFirebaseAvailable()) {
+    // If Firebase not available, no real-time updates
+    return () => {};
+  }
+
   try {
-    // We'll load individual docs as needed, but this could be optimized
-    // to load all at once if needed
-    const keys = Object.keys(localStorage).filter(key => key.startsWith('landing-') || key.startsWith('editMode'));
-    const content = {};
+    const contentCollection = collection(db, 'content');
     
-    for (const key of keys) {
-      const value = await loadContent(key);
-      if (value) {
-        content[key] = value;
-      }
-    }
-    
-    return content;
+    // Set up real-time listener
+    const unsubscribe = onSnapshot(contentCollection, (snapshot) => {
+      const content = {};
+      snapshot.forEach((doc) => {
+        content[doc.id] = doc.data().value || null;
+      });
+      callback(content);
+    }, (error) => {
+      console.error('Error listening to content updates:', error);
+    });
+
+    return unsubscribe;
   } catch (error) {
-    console.error('Error loading all content:', error);
-    return {};
+    console.error('Error setting up content listener:', error);
+    return () => {};
   }
 }
 
