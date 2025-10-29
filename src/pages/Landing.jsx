@@ -13,19 +13,19 @@ export default function Landing() {
     {
       title: 'Media',
       path: '/media',
-      description: 'See real examples of manufactured consent',
+      description: 'See real examples of Herman and Chomsky\'s concept of "manufactured consent"',
       icon: '📱'
     },
     {
       title: 'Analysis',
       path: '/analysis',
-      description: 'Understand the mechanisms of narrative control',
+      description: 'Understand the specific mechanisms of narrative control',
       icon: '📊'
     },
     {
-      title: 'Interactive',
+      title: 'Spot the Hasbara Quiz',
       path: '/interactive',
-      description: 'Test your ability to spot propaganda',
+      description: 'Test your ability to tell what\'s hasbara and what\'s not',
       icon: '🎮'
     }
   ];
@@ -69,7 +69,7 @@ export default function Landing() {
           <div className="max-w-3xl mx-auto text-lg text-orwell-light mb-12 leading-relaxed">
             <p className="mb-4">
               <EditableText
-                value="In George Orwell's 1984, the Ministry of Truth controlled reality by controlling language and information. The regime didn't just lie—it made truth impossible to express."
+                value="In George Orwell's 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth controlled reality by controlling language and information. The regime didn't just lie—it made truth impossible to express."
                 storageKey="landing-para-1"
                 className="text-orwell-light"
                 tag="span"
@@ -84,15 +84,14 @@ export default function Landing() {
               />
               {' '}
               <EditableText
-                value={(String.raw`(Hebrew: הסברה‎) means "explanation" but refers to Israel's public relations and propaganda apparatus. Like Orwell's Ministry, it doesn't just tell a story—it controls what story can be told.`)}
-                storageKey="landing-para-2"
+                value={`(Hebrew: הסברה‎) means "explanation" but refers to Israel's PR and state-run propaganda apparatus. Much like Orwell's Minitruth, its objective is not to tell their side of the story, but in fact to limit what sides of the story can be told.`} storageKey="landing-para-2"
                 className="text-orwell-light"
                 tag="span"
               />
             </p>
             <p>
               <EditableText
-                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly in Gaza, through the lens of Orwell's warnings about language and power."
+                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly in Gaza, through the lens of Orwell's warnings about language and power."
                 storageKey="landing-para-3"
                 className="text-orwell-light"
                 tag="span"
@@ -155,7 +154,7 @@ export default function Landing() {
           <h3 className="text-xl font-bold mb-3 text-hasbara-red">⚠️ About This Exhibit</h3>
           <p className="text-orwell-light mb-2">
             <EditableText
-              value="This is an educational project about propaganda techniques and media literacy. It examines how language is used to shape perception of the Israeli-Palestinian conflict, particularly regarding Gaza."
+              value="This is an educational project about propaganda techniques and media literacy. It was not intended as a call to or expression of antisemitism nor should it be construed as such. It simply examines how language is used to shape perception of the Israeli-Palestinian conflict, particularly regarding Gaza."
               storageKey="landing-about-para-1"
               className="text-orwell-light"
               tag="span"
@@ -163,7 +162,7 @@ export default function Landing() {
           </p>
           <p className="text-orwell-light">
             <EditableText
-              value="All examples are presented for critical analysis under fair use. This project does not endorse violence by any party. It advocates for honest language, media literacy, and recognition of all human lives."
+              value="Though the writing is human, generative AI was used to create this website."
               storageKey="landing-about-para-2"
               className="text-orwell-light"
               tag="span"

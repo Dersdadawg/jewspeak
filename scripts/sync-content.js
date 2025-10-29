@@ -76,8 +76,10 @@ function updateSourceFile(filePath, storageKey, newValue) {
   
   // Pattern 1: Simple quoted value on same line
   // Matches: value="text" storageKey="key"
+  const quoteChar = '["\'`]';
+  const nonQuotes = '[^"\'`]*?';
   let pattern = new RegExp(
-    `(value=["'\`])([^"'\\`]*?)(["'\`]\\s+storageKey=["'\`]${escapedKey}["'\`])`,
+    `(value=${quoteChar})(${nonQuotes})(${quoteChar}\\s+storageKey=${quoteChar}${escapedKey}${quoteChar})`,
     's'
   );
   
@@ -87,17 +89,18 @@ function updateSourceFile(filePath, storageKey, newValue) {
     // Pattern 2: Value on separate line
     // Matches: value="text"\n  storageKey="key"
     pattern = new RegExp(
-      `(value=["'\`])([^"'\\`]*?)(["'\`][^\\n]*?storageKey=["'\`]${escapedKey}["'\`])`,
+      `(value=${quoteChar})(${nonQuotes})(${quoteChar}[^\\n]*?\\n[^\\n]*?storageKey=${quoteChar}${escapedKey}${quoteChar})`,
       's'
     );
     match = content.match(pattern);
   }
   
   if (!match) {
-    // Pattern 3: Template literal with String.raw
+    // Pattern 3: Template literal으 String.raw
     // Matches: value={String.raw`text`} storageKey="key"
+    const backtick = '`';
     pattern = new RegExp(
-      `(value=\\{[^}]*String\\.raw\\`[^\\`]*?\\`[^}]*\\}\\s+storageKey=["'\`]${escapedKey}["'\`])`,
+      `(value=\\{[^}]*String\\.raw\\${backtick}[^\\${backtick}]*?\\${backtick}[^}]*\\}\\s+storageKey=${quoteChar}${escapedKey}${quoteChar})`,
       's'
     );
     match = content.match(pattern);
@@ -160,14 +163,14 @@ function syncContentToSource(savedContentPath) {
   let errors = 0;
   
   for (const [storageKey, newValue] of Object.entries(savedContent)) {
-    const mapping = storageKeyMap[storageKey];
+    let mapping = storageKeyMap[storageKey];
     
     if (!mapping) {
       // Handle dynamic keys (like landing-section-0-title)
       if (storageKey.startsWith('landing-section-')) {
         const sectionMatch = storageKey.match(/landing-section-(\d+)-(title|desc)/);
         if (sectionMatch) {
-          mapping = { file: 'src/pages/Landing.jsx', pattern: `storageKey={\`landing-section-${sectionMatch[1]}-${sectionMatch[2]}\`}` };
+          mapping = { file: 'src/pages/Landing.jsx', pattern: `storageKey={\`landing-section-\\$\\{index\\}-${sectionMatch[2]}\`}` };
         }
       }
       

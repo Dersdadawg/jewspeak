@@ -323,7 +323,7 @@ export default function InteractivePage() {
           {!showExplanation && (
             <div className="bg-orwell-gray p-4 rounded text-sm text-orwell-light">
               <strong className="text-hasbara-red">💡 Tip:</strong> <EditableText
-                value="Consider the source, emotional appeal, omissions, and whether verifiable facts are provided. Hasbara often uses official talking points, shifts blame, and creates moral frameworks that obscure power dynamics."
+                value="Consider the source, emotional appeal, omissions, and whether verifiable facts are provided."
                 storageKey="interactive-tip"
                 className="text-orwell-light"
                 tag="span"

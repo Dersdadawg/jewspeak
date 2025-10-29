@@ -132,7 +132,7 @@ export default function MediaPage() {
           <div className="mb-8 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
               <EditableText
-                value="Modern propaganda doesn't just happen on state TV. It's in your social media feed, shaped by coordinated campaigns, talking points, and strategic framing."
+                value="Modern propaganda isn't served on a telescreen like in 1984. It's much more pervasive than that. It's in our social media algorithms, on the TV screens, and in the mouths of our politicians. Hasbarists know and exploit this fact.'t served on a telescreen like in 1984. It's much more pervasive than that. It's in our social media algorithms, on the TV screens, and in the mouths of our politicians. Hasbarists know and exploit this fact.'t just happen on state TV. It's in your social media feed, shaped by coordinated campaigns, talking points, and strategic framing."
                 storageKey="media-intro-1"
                 className="text-orwell-light"
                 tag="span"

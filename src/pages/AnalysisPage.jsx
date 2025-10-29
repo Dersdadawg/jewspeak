@@ -45,7 +45,7 @@ export default function AnalysisPage() {
         >
           <h1 className="section-title">
             <EditableText
-              value="Doublethink and Narrative Control"
+              value="Doublethink - Analysis of Propaganda Techniques"
               storageKey="analysis-title"
               className="text-white"
               tag="span"
@@ -65,7 +65,7 @@ export default function AnalysisPage() {
           <div className="mb-12 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
               <EditableText
-                value="Propaganda isn't just about what's said—it's about creating a framework where contradictions can coexist without cognitive dissonance."
+                value="Propaganda's venom lies not in what it says, but the framework it creates where contradictions can coexist without cognitive dissonance, in other words, it breeds doublethink.'s venom lies not in what it says, but the framework it creates where contradictions can coexist without cognitive dissonance, in other words, it breeds doublethink.'t just about what's said—it's about creating a framework where contradictions can coexist without cognitive dissonance."
                 storageKey="analysis-intro-1"
                 className="text-orwell-light"
                 tag="span"
@@ -73,7 +73,7 @@ export default function AnalysisPage() {
             </p>
             <p className="mb-4">
               <EditableText
-                value="How can Israel be 'defending itself' while occupying? How can it be 'the only democracy in the Middle East' while millions live under military rule? How can bombing civilians be justified as 'human shields'?"
+                value="How can Israel be 'defending itself' while occupying Palestinian territory? How can it be 'the only democracy in the Middle East' while millions are second-class citizens in an apartheid state? How can bombing children be justified as 'human shields'?'defending itself' while occupying Palestinian territory? How can it be 'the only democracy in the Middle East' while millions are second-class citizens in an apartheid state? How can bombing children be justified as 'human shields'?'defending itself' while occupying? How can it be 'the only democracy in the Middle East' while millions live under military rule? How can bombing civilians be justified as 'human shields'?"
                 storageKey="analysis-intro-2"
                 className="text-orwell-light"
                 tag="span"
@@ -81,7 +81,7 @@ export default function AnalysisPage() {
             </p>
             <p className="text-hasbara-red font-semibold">
               <EditableText
-                value="This is doublethink in action—and it's the foundation of modern Hasbara."
+                value="This is the modern rendition of doublethink, given new life through the medium of hasbara.'s the foundation of modern Hasbara."
                 storageKey="analysis-intro-3"
                 className="text-hasbara-red font-semibold"
                 tag="span"
