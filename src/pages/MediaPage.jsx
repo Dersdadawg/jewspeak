@@ -14,7 +14,15 @@ function MediaCard({ example, index }) {
     'Moral Superiority': 'border-green-500',
     'False Equivalence': 'border-gray-500',
     'Evidence Manipulation': 'border-orange-500',
-    'Strawman Argument': 'border-pink-500'
+    'Strawman Argument': 'border-pink-500',
+    'Precision Strike Framing': 'border-cyan-500',
+    'Hospital-as-Base Narrative': 'border-rose-500',
+    'Humanitarian vs. Enemy Depravity': 'border-indigo-500',
+    'Evacuation Warnings as Evidence of Care': 'border-teal-500',
+    'Evidence by Visual Authority': 'border-amber-500',
+    'Victimhood/Holocaust Memory Linkage': 'border-violet-500',
+    'Kill-Action Sanitization': 'border-red-600',
+    'Coordinated Online Campaigns': 'border-slate-500'
   };
 
   return (
@@ -35,6 +43,16 @@ function MediaCard({ example, index }) {
       {/* Mock Social Media Post */}
       <div className="bg-orwell-dark p-4 rounded mb-4 border border-gray-600">
         <p className="text-white italic">{example.caption}</p>
+        {example.link && (
+          <a 
+            href={example.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-blue-400 hover:text-blue-300 mt-2 block underline"
+          >
+            View Original Post →
+          </a>
+        )}
       </div>
 
       {/* Toggle Button */}
