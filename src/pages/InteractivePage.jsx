@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { quizData } from '../data/hasbaraExamples';
+import EditableText from '../components/EditableText';
 
 export default function InteractivePage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -119,10 +120,20 @@ export default function InteractivePage() {
                 💭 Final Reflection
               </h3>
               <p className="text-orwell-light mb-3">
-                Propaganda isn't about lies—it's about controlling what questions you're allowed to ask.
+                <EditableText
+                  value="Propaganda isn't about lies—it's about controlling what questions you're allowed to ask."
+                  storageKey="interactive-reflection-1"
+                  className="text-orwell-light"
+                  tag="span"
+                />
               </p>
               <p className="text-orwell-light mb-3">
-                When you see news about Israel/Palestine, don't just ask "Is this true?" Ask:
+                <EditableText
+                  value="When you see news about Israel/Palestine, don't just ask 'Is this true?' Ask:"
+                  storageKey="interactive-reflection-2"
+                  className="text-orwell-light"
+                  tag="span"
+                />
               </p>
               <ul className="text-orwell-light space-y-2 ml-4">
                 <li>• Who benefits from this framing?</li>
@@ -156,14 +167,31 @@ export default function InteractivePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title text-center">Can You Spot the Hasbara?</h1>
+          <h1 className="section-title text-center">
+            <EditableText
+              value="Can You Spot the Hasbara?"
+              storageKey="interactive-title"
+              className="text-white"
+              tag="span"
+            />
+          </h1>
 
           <div className="mb-8 text-center text-orwell-light">
             <p className="text-lg mb-4">
-              Test your ability to distinguish between propaganda and factual statements.
+              <EditableText
+                value="Test your ability to distinguish between propaganda and factual statements."
+                storageKey="interactive-intro-1"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-sm text-gray-400">
-              Not all uncomfortable facts are propaganda, and not all comfortable statements are true.
+              <EditableText
+                value="Not all uncomfortable facts are propaganda, and not all comfortable statements are true."
+                storageKey="interactive-intro-2"
+                className="text-gray-400"
+                tag="span"
+              />
             </p>
           </div>
 
@@ -294,9 +322,12 @@ export default function InteractivePage() {
           {/* Help Box */}
           {!showExplanation && (
             <div className="bg-orwell-gray p-4 rounded text-sm text-orwell-light">
-              <strong className="text-hasbara-red">💡 Tip:</strong> Consider the source, emotional appeal, 
-              omissions, and whether verifiable facts are provided. Hasbara often uses official talking points, 
-              shifts blame, and creates moral frameworks that obscure power dynamics.
+              <strong className="text-hasbara-red">💡 Tip:</strong> <EditableText
+                value="Consider the source, emotional appeal, omissions, and whether verifiable facts are provided. Hasbara often uses official talking points, shifts blame, and creates moral frameworks that obscure power dynamics."
+                storageKey="interactive-tip"
+                className="text-orwell-light"
+                tag="span"
+              />
             </div>
           )}
         </motion.div>

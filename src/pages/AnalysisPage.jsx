@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { propagandaTechniques, propagandaKeywords } from '../data/hasbaraExamples';
+import EditableText from '../components/EditableText';
 
 function TechniqueCard({ technique, index }) {
   return (
@@ -73,25 +74,49 @@ export default function AnalysisPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title">Doublethink and Narrative Control</h1>
+          <h1 className="section-title">
+            <EditableText
+              value="Doublethink and Narrative Control"
+              storageKey="analysis-title"
+              className="text-white"
+              tag="span"
+            />
+          </h1>
 
           <div className="orwell-quote mb-12">
-            "Doublethink means the power of holding two contradictory beliefs in one's mind simultaneously, 
-            and accepting both of them."
+            <EditableText
+              value="Doublethink means the power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them."
+              storageKey="analysis-quote"
+              className="block"
+              tag="div"
+            />
             <span className="block text-sm mt-2 text-gray-400">— George Orwell, 1984</span>
           </div>
 
           <div className="mb-12 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
-              Propaganda isn't just about what's said—it's about creating a framework where contradictions 
-              can coexist without cognitive dissonance.
+              <EditableText
+                value="Propaganda isn't just about what's said—it's about creating a framework where contradictions can coexist without cognitive dissonance."
+                storageKey="analysis-intro-1"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="mb-4">
-              How can Israel be "defending itself" while occupying? How can it be "the only democracy in the Middle East" 
-              while millions live under military rule? How can bombing civilians be justified as "human shields"?
+              <EditableText
+                value="How can Israel be 'defending itself' while occupying? How can it be 'the only democracy in the Middle East' while millions live under military rule? How can bombing civilians be justified as 'human shields'?"
+                storageKey="analysis-intro-2"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-hasbara-red font-semibold">
-              This is doublethink in action—and it's the foundation of modern Hasbara.
+              <EditableText
+                value="This is doublethink in action—and it's the foundation of modern Hasbara."
+                storageKey="analysis-intro-3"
+                className="text-hasbara-red font-semibold"
+                tag="span"
+              />
             </p>
           </div>
 
@@ -202,13 +227,20 @@ export default function AnalysisPage() {
           <div className="bg-hasbara-red bg-opacity-10 border-2 border-hasbara-red p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-hasbara-red">💡 Breaking Through Doublethink</h3>
             <p className="text-orwell-light mb-3">
-              Orwell warned that doublethink makes resistance impossible—not through violence, but through confusion. 
-              If you can't name what's happening, you can't oppose it.
+              <EditableText
+                value="Orwell warned that doublethink makes resistance impossible—not through violence, but through confusion. If you can't name what's happening, you can't oppose it."
+                storageKey="analysis-insight-1"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-orwell-light">
-              <strong>The antidote?</strong> Precise language. Call occupation "occupation." Call ethnic cleansing 
-              "ethnic cleansing." Call genocide "genocide." When someone tries to muddy the waters with euphemisms, 
-              ask: "What does that actually mean?" Force clarity. That's how you resist doublethink.
+              <strong>The antidote?</strong> <EditableText
+                value="Precise language. Call occupation 'occupation.' Call ethnic cleansing 'ethnic cleansing.' Call genocide 'genocide.' When someone tries to muddy the waters with euphemisms, ask: 'What does that actually mean?' Force clarity. That's how you resist doublethink."
+                storageKey="analysis-insight-2"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
           </div>
         </motion.div>

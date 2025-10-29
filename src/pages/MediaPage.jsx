@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { mediaExamples } from '../data/hasbaraExamples';
+import EditableText from '../components/EditableText';
 
 function MediaCard({ example, index }) {
   const [showExplanation, setShowExplanation] = useState(false);
@@ -91,28 +92,49 @@ export default function MediaPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title">Manufacturing Consent</h1>
+          <h1 className="section-title">
+            <EditableText
+              value="Manufacturing Consent"
+              storageKey="media-title"
+              className="text-white"
+              tag="span"
+            />
+          </h1>
 
           <div className="orwell-quote mb-12">
-            "The Ministry of Peace concerns itself with war, the Ministry of Truth with lies, 
-            the Ministry of Love with torture and the Ministry of Plenty with starvation. 
-            These contradictions are not accidental, nor do they result from from ordinary hypocrisy: 
-            they are deliberate exercises in doublethink."
+            <EditableText
+              value="The Ministry of Peace concerns itself with war, the Ministry of Truth with lies, the Ministry of Love with torture and the Ministry of Plenty with starvation. These contradictions are not accidental, nor do they result from from ordinary hypocrisy: they are deliberate exercises in doublethink."
+              storageKey="media-quote"
+              className="block"
+              tag="div"
+            />
             <span className="block text-sm mt-2 text-gray-400">— George Orwell, 1984</span>
           </div>
 
           <div className="mb-8 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
-              Modern propaganda doesn't just happen on state TV. It's in your social media feed, 
-              shaped by coordinated campaigns, talking points, and strategic framing.
+              <EditableText
+                value="Modern propaganda doesn't just happen on state TV. It's in your social media feed, shaped by coordinated campaigns, talking points, and strategic framing."
+                storageKey="media-intro-1"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="mb-4">
-              These examples show how Hasbara operates on social media: using emotional appeals, 
-              selective framing, omission of context, and linguistic manipulation to shape how people 
-              understand Israel's actions in Gaza.
+              <EditableText
+                value="These examples show how Hasbara operates on social media: using emotional appeals, selective framing, omission of context, and linguistic manipulation to shape how people understand Israel's actions in Gaza."
+                storageKey="media-intro-2"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-hasbara-red font-semibold">
-              Click "Show Analysis" on each post to see the propaganda technique at work.
+              <EditableText
+                value="Click 'Show Analysis' on each post to see the propaganda technique at work."
+                storageKey="media-instruction"
+                className="text-hasbara-red font-semibold"
+                tag="span"
+              />
             </p>
           </div>
 
@@ -146,7 +168,12 @@ export default function MediaPage() {
           {/* Educational Box */}
           <div className="bg-orwell-gray p-8 rounded-lg mb-8">
             <h2 className="text-2xl font-bold mb-4 text-white">
-              Understanding the Propaganda Ecosystem
+              <EditableText
+                value="Understanding the Propaganda Ecosystem"
+                storageKey="media-ecosystem-title"
+                className="text-white"
+                tag="span"
+              />
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-orwell-light">
               <div>
@@ -177,7 +204,12 @@ export default function MediaPage() {
           <div className="bg-hasbara-red bg-opacity-10 border-2 border-hasbara-red p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-hasbara-red">💡 Media Literacy Reminder</h3>
             <p className="text-orwell-light mb-3">
-              Ask yourself when you see social media about Israel/Palestine:
+              <EditableText
+                value="Ask yourself when you see social media about Israel/Palestine:"
+                storageKey="media-literacy-intro"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <ul className="text-orwell-light space-y-2">
               <li>• <strong>Who is the source?</strong> Are they government-affiliated?</li>

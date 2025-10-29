@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { languageExamples } from '../data/hasbaraExamples';
+import EditableText from '../components/EditableText';
 
 function FlipCard({ example }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -66,25 +67,49 @@ export default function LanguagePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title">Newspeak in the 21st Century</h1>
+          <h1 className="section-title">
+            <EditableText
+              value="Newspeak in the 21st Century"
+              storageKey="language-title"
+              className="text-white"
+              tag="span"
+            />
+          </h1>
 
           <div className="orwell-quote mb-12">
-            "Don't you see that the whole aim of Newspeak is to narrow the range of thought? 
-            In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it."
+            <EditableText
+              value="Don't you see that the whole aim of Newspeak is to narrow the range of thought? In the end we shall make thoughtcrime literally impossible, because there will be no words in which to express it."
+              storageKey="language-quote"
+              className="block"
+              tag="div"
+            />
             <span className="block text-sm mt-2 text-gray-400">— George Orwell, 1984</span>
           </div>
 
           <div className="mb-12 text-orwell-light max-w-4xl">
             <p className="mb-4 text-lg">
-              In <em>1984</em>, Newspeak was designed to make certain thoughts impossible to express. 
-              Modern propaganda doesn't eliminate words—it changes what they mean.
+              <EditableText
+                value="In 1984, Newspeak was designed to make certain thoughts impossible to express. Modern propaganda doesn't eliminate words—it changes what they mean."
+                storageKey="language-intro-1"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="mb-4">
-              Hasbara employs euphemisms, reframings, and loaded language to make occupation sound like self-defense, 
-              ethnic cleansing sound like security, and genocide sound like a "conflict."
+              <EditableText
+                value="Hasbara employs euphemisms, reframings, and loaded language to make occupation sound like self-defense, ethnic cleansing sound like security, and genocide sound like a 'conflict.'"
+                storageKey="language-intro-2"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-hasbara-red font-semibold">
-              Click each card to reveal what the propaganda language actually means.
+              <EditableText
+                value="Click each card to reveal what the propaganda language actually means."
+                storageKey="language-instruction"
+                className="text-hasbara-red font-semibold"
+                tag="span"
+              />
             </p>
           </div>
 
@@ -105,7 +130,12 @@ export default function LanguagePage() {
           {/* Comparison Section */}
           <div className="bg-orwell-gray p-8 rounded-lg mb-8">
             <h2 className="text-2xl font-bold mb-6 text-white">
-              Orwell's Newspeak vs. Modern Hasbara
+              <EditableText
+                value="Orwell's Newspeak vs. Modern Hasbara"
+                storageKey="language-comparison-title"
+                className="text-white"
+                tag="span"
+              />
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="border-l-4 border-hasbara-red pl-4">
@@ -135,10 +165,12 @@ export default function LanguagePage() {
           <div className="bg-hasbara-red bg-opacity-10 border-2 border-hasbara-red p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-3 text-hasbara-red">💡 The Power of Language</h3>
             <p className="text-orwell-light">
-              Propaganda isn't just about lying. It's about controlling the terms of debate. If you can make people 
-              say "conflict" instead of "occupation," "disputed territories" instead of "stolen land," and "human shields" 
-              instead of "civilians," you've already won. The question isn't "Is Israel defending itself?"—the question is 
-              "Why are these the only words we're allowed to use?"
+              <EditableText
+                value="Propaganda isn't just about lying. It's about controlling the terms of debate. If you can make people say 'conflict' instead of 'occupation,' 'disputed territories' instead of 'stolen land,' and 'human shields' instead of 'civilians,' you've already won. The question isn't 'Is Israel defending itself?'—the question is 'Why are these the only words we're allowed to use?'"
+                storageKey="language-insight"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
           </div>
         </motion.div>

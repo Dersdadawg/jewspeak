@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import EditableText from '../components/EditableText';
 
 export default function AboutPage() {
   const sources = [
@@ -49,22 +50,41 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title">About This Project</h1>
+          <h1 className="section-title">
+            <EditableText
+              value="About This Project"
+              storageKey="about-title"
+              className="text-white"
+              tag="span"
+            />
+          </h1>
 
           {/* Purpose Section */}
           <div className="card mb-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Purpose & Intent</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">
+              <EditableText
+                value="Purpose & Intent"
+                storageKey="about-purpose-title"
+                className="text-white"
+                tag="span"
+              />
+            </h2>
             <div className="text-orwell-light space-y-4">
               <p>
-                <strong className="text-hasbara-red">The Ministry of Hasbara</strong> is an educational project 
-                about propaganda, media literacy, and the power of language. It examines how modern state propaganda—
-                specifically Israeli Hasbara—employs techniques that George Orwell warned about in his dystopian 
-                novel <em>1984</em>.
+                <strong className="text-hasbara-red">The Ministry of Hasbara</strong> <EditableText
+                  value="is an educational project about propaganda, media literacy, and the power of language. It examines how modern state propaganda—specifically Israeli Hasbara—employs techniques that George Orwell warned about in his dystopian novel 1984."
+                  storageKey="about-purpose-1"
+                  className="text-orwell-light"
+                  tag="span"
+                />
               </p>
               <p>
-                This project is not about "both sides" of a "conflict." It is about recognizing propaganda when 
-                one side has overwhelming military, economic, and media power, and uses that power to control 
-                narrative and language.
+                <EditableText
+                  value="This project is not about 'both sides' of a 'conflict.' It is about recognizing propaganda when one side has overwhelming military, economic, and media power, and uses that power to control narrative and language."
+                  storageKey="about-purpose-2"
+                  className="text-orwell-light"
+                  tag="span"
+                />
               </p>
               <p>
                 <strong>This project advocates for:</strong>
@@ -109,7 +129,14 @@ export default function AboutPage() {
 
           {/* What is Hasbara */}
           <div className="card mb-8">
-            <h2 className="text-2xl font-bold text-white mb-4">What is Hasbara?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">
+              <EditableText
+                value="What is Hasbara?"
+                storageKey="about-hasbara-title"
+                className="text-white"
+                tag="span"
+              />
+            </h2>
             <div className="text-orwell-light space-y-4">
               <p>
                 <strong className="text-hasbara-red">Hasbara</strong> (הסברה‎) is Hebrew for "explanation" 
@@ -193,10 +220,21 @@ export default function AboutPage() {
 
           {/* Contact/Contribute */}
           <div className="bg-orwell-gray p-6 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-white mb-3">About the Creator</h2>
+            <h2 className="text-2xl font-bold text-white mb-3">
+              <EditableText
+                value="About the Creator"
+                storageKey="about-creator-title"
+                className="text-white"
+                tag="span"
+              />
+            </h2>
             <p className="text-orwell-light mb-4">
-              This project was created as an educational tool to promote media literacy and critical thinking 
-              about propaganda. It is open-source and available for educational use.
+              <EditableText
+                value="This project was created as an educational tool to promote media literacy and critical thinking about propaganda. It is open-source and available for educational use."
+                storageKey="about-creator-text"
+                className="text-orwell-light"
+                tag="span"
+              />
             </p>
             <p className="text-sm text-gray-400">
               "If liberty means anything at all, it means the right to tell people what they do not want to hear." 

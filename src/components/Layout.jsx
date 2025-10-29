@@ -1,8 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEditMode } from '../contexts/EditModeContext';
 
 export default function Layout({ children }) {
   const location = useLocation();
+  const { isEditMode, toggleEditMode } = useEditMode();
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -27,7 +29,7 @@ export default function Layout({ children }) {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -41,28 +43,52 @@ export default function Layout({ children }) {
                   {item.label}
                 </Link>
               ))}
+              <button
+                onClick={toggleEditMode}
+                className={`px-3 py-1 rounded transition-colors ${
+                  isEditMode
+                    ? 'bg-yellow-600 text-white'
+                    : 'bg-orwell-dark text-gray-300 hover:bg-gray-700'
+                }`}
+                title="Toggle edit mode"
+              >
+                ✏️ {isEditMode ? 'Editing' : 'Edit'}
+              </button>
             </div>
 
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden text-white focus:outline-none"
-              onClick={() => {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-              }}
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {/* Mobile menu button and edit toggle */}
+            <div className="md:hidden flex items-center space-x-2">
+              <button
+                onClick={toggleEditMode}
+                className={`px-2 py-1 rounded text-sm ${
+                  isEditMode
+                    ? 'bg-yellow-600 text-white'
+                    : 'bg-orwell-dark text-gray-300'
+                }`}
+                title="Toggle edit mode"
               >
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
+                ✏️
+              </button>
+              <button
+                className="text-white focus:outline-none"
+                onClick={() => {
+                  const menu = document.getElementById('mobile-menu');
+                  menu.classList.toggle('hidden');
+                }}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -83,6 +109,11 @@ export default function Layout({ children }) {
                 {item.label}
               </Link>
             ))}
+            {isEditMode && (
+              <div className="mt-2 p-2 bg-yellow-900/20 rounded text-sm text-yellow-400">
+                ✏️ Edit mode: Tap any text to edit it
+              </div>
+            )}
           </div>
         </nav>
       </header>
