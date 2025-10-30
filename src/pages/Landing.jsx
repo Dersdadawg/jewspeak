@@ -69,7 +69,7 @@ export default function Landing() {
           <div className="max-w-3xl mx-auto text-lg text-orwell-light mb-12 leading-relaxed">
             <p className="mb-4">
               <EditableText
-                value="In George Orwell's 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth controlled reality by controlling language and information. The regime didn't just lie—it made truth impossible to express."
+                value="In George Orwell's 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth effectively controls reality itself through its control on language and history. One imagines that such an entity could only exist within the pages of a novel, but there are several modern analogues to Minitruth.'s 1984, the Ministry of Truth controlled reality by controlling language and information. The regime didn't just lie—it made truth impossible to express."
                 storageKey="landing-para-1"
                 className="text-orwell-light"
                 tag="span"
@@ -91,7 +91,7 @@ export default function Landing() {
             </p>
             <p>
               <EditableText
-                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly in Gaza, through the lens of Orwell's warnings about language and power."
+                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly in Gaza, through the lens of Orwell's warnings about language and power."
                 storageKey="landing-para-3"
                 className="text-orwell-light"
                 tag="span"
