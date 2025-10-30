@@ -6,11 +6,10 @@ export default function AboutPage() {
     {
       category: "Books & Academic Works",
       items: [
-        "Orwell, George. *1984*. London: Secker & Warburg, 1949.",
-        "Khalidi, Rashid. *The Hundred Years' War on Palestine*. Metropolitan Books, 2020.",
-        "Pappé, Ilan. *The Ethnic Cleansing of Palestine*. Oneworld, 2006.",
-        "Said, Edward. *Covering Islam: How the Media and the Experts Determine How We See the Rest of the World*. Vintage, 1997.",
-        "Herman, Edward S. and Noam Chomsky. *Manufacturing Consent: The Political Economy of the Mass Media*. Pantheon, 1988.",
+        "Orwell, George. *1984*",
+        "Pappé, Ilan. *The Ethnic Cleansing of Palestine*",
+        "Said, Edward. *Covering Islam: How the Media and the Experts Determine How We See the Rest of the World*",
+        "Herman, Edward S. and Noam Chomsky. *Manufacturing Consent: The Political Economy of the Mass Media*.",
       ]
     },
     {
@@ -25,10 +24,11 @@ export default function AboutPage() {
     {
       category: "Journalism & Media Analysis",
       items: [
-        "Committee to Protect Journalists (CPJ). Reports on journalist deaths in Gaza, 2023-2024.",
-        "Al Jazeera, BBC, The Guardian, The New York Times. Various investigative reports on Gaza conflict.",
+        "Committee to Protect Journalists (CPJ), 2023-2024.",
+        "Al Jazeera, BBC, The Guardian, The New York Times",
         "The Intercept. Reporting on Israeli propaganda efforts and U.S. media bias.",
-        "+972 Magazine. Israeli and Palestinian journalism on occupation and apartheid.",
+        "+972 Magazine. Israeli and Palestinian journalism on occupation and apartheid",
+        "Haaretz. Left-wing Israeli newspaper critical of the government",
       ]
     },
     {
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div className="text-orwell-light space-y-4">
               <p>
                 <strong className="text-hasbara-red">The Ministry of Hasbara</strong> <EditableText
-                  value="is an educational project about propaganda, media literacy, and the power of language. It examines how modern state propaganda—specifically Israeli Hasbara—employs techniques that George Orwell warned about in his dystopian novel 1984."
+                  value="is an educational project about propaganda and the power of language. It examines how Israeli hasbara employs techniques that George Orwell warned about in 1984."
                   storageKey="about-purpose-1"
                   className="text-orwell-light"
                   tag="span"
@@ -80,7 +80,7 @@ export default function AboutPage() {
               </p>
               <p>
                 <EditableText
-                  value="This project is not about 'both sides' of a 'conflict.' It is about recognizing propaganda when one side has overwhelming military, economic, and media power, and uses that power to control narrative and language."
+                  value="This project is not about 'both sides' of a 'conflict.' It is about recognizing propaganda when one side has overwhelming power, and uses that power to control the narrative and language."
                   storageKey="about-purpose-2"
                   className="text-orwell-light"
                   tag="span"
@@ -90,11 +90,11 @@ export default function AboutPage() {
                 <strong>This project advocates for:</strong>
               </p>
               <ul className="list-disc ml-6 space-y-2">
-                <li>Honest language about occupation, apartheid, and violence</li>
-                <li>Media literacy and critical thinking</li>
+                <li>Honest language the genocide</li>
+                <li>Media literacy</li>
                 <li>Recognition of all human lives as equally valuable</li>
                 <li>The right of people to resist oppression</li>
-                <li>Freedom for Palestine and equality for all people in the region</li>
+                <li>Freedom for Palestine</li>
               </ul>
             </div>
           </div>
@@ -110,14 +110,12 @@ export default function AboutPage() {
               </p>
               <p>
                 <strong>Antisemitism:</strong> This project critiques Israeli state actions and propaganda. 
-                Criticism of a state is not racism. Many of the sources cited are Jewish scholars, journalists, 
-                and human rights organizations. Conflating criticism of Israel with antisemitism is itself a 
-                propaganda tactic.
+                Criticism of a state is not racism or hatred. Many of the sources cited are Jewish scholars, journalists, 
+                and human rights organizations. Conflating criticism of Israel with antisemitism is itself hasbara.
               </p>
               <p>
                 <strong>Violence:</strong> This project does not endorse violence by any party. It recognizes 
-                the right to resist occupation while insisting on honest language about who holds power and who 
-                is killing whom.
+                the right to resist occupation while insisting on honest language about who really is killing whom.
               </p>
               <p>
                 <strong>Accuracy:</strong> Every effort has been made to ensure factual accuracy. All claims 
@@ -154,9 +152,6 @@ export default function AboutPage() {
                 <li>Suppression of critical voices through accusations of antisemitism</li>
                 <li>Control of journalist access to conflict zones</li>
               </ul>
-              <p>
-                It's not just about telling Israel's story—it's about making other stories impossible to tell.
-              </p>
             </div>
           </div>
 
