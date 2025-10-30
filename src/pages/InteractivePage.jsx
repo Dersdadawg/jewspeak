@@ -121,7 +121,7 @@ export default function InteractivePage() {
               </h3>
               <p className="text-orwell-light mb-3">
                 <EditableText
-                  value="Propaganda isn't about lies—it's about controlling what questions you're allowed to ask."
+                  value="Propaganda controls what questions you're allowed to ask."
                   storageKey="interactive-reflection-1"
                   className="text-orwell-light"
                   tag="span"
