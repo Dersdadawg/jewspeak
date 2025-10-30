@@ -176,70 +176,70 @@ export const quizData = [
     id: 1,
     statement: "Israel has the most moral army in the world, taking unprecedented steps to avoid civilian casualties.",
     isHasbara: true,
-    explanation: "This is classic hasbara. The phrase 'most moral army in the world' is a propaganda slogan used to preempt criticism. While framed as fact, it's an unprovable moral claim that serves to deflect accountability.",
+    explanation: "Classic hasbara line. 'Most moral army' is a vibes claim, not a measurable fact. It’s there to preempt criticism and launder civilian harm as virtue.",
     indicators: ["Superlative claim", "Moral framing", "No verifiable metric", "Official talking point"]
   },
   {
     id: 2,
     statement: "The UN reports that over 10,000 children have been killed in Gaza since October 2023.",
     isHasbara: false,
-    explanation: "This is a verifiable factual statement from the United Nations, reported by international organizations. Facts that are uncomfortable are not propaganda.",
+    explanation: "This is a straight, checkable fact from the UN. Uncomfortable ≠ propaganda.",
     indicators: ["Attributable source", "Verifiable data", "Widely reported by independent media"]
   },
   {
     id: 3,
     statement: "Hamas uses Palestinian civilians as human shields, which is why so many die in Israeli operations.",
     isHasbara: true,
-    explanation: "While Hamas operates in densely populated areas (Gaza is one of the most densely populated places on Earth), this framing shifts moral responsibility for civilian deaths from the attacker to the defenders. It suggests that civilian presence justifies bombing them.",
+    explanation: "Yes, Gaza is dense. But this framing dumps moral responsibility on the people being bombed and pretends civilian presence makes bombing acceptable.",
     indicators: ["Shifts blame", "Justifies civilian casualties", "Ignores context of geography", "Repeated official narrative"]
   },
   {
     id: 4,
     statement: "Both Israelis and Palestinians deserve to live in peace and security.",
     isHasbara: false,
-    explanation: "This is a genuine statement of principle that doesn't advance a specific political narrative or obscure power dynamics. However, similar language CAN be hasbara when used to create false equivalence about suffering or responsibility.",
+    explanation: "A basic principle, not spin. It can turn into hasbara when it’s used to paper over power and responsibility, but standing alone it’s fine.",
     indicators: ["Principle statement", "No blame shifting", "Acknowledges both peoples"]
   },
   {
     id: 5,
     statement: "Gaza is an open-air prison where movement, resources, and economy are controlled by Israel.",
     isHasbara: false,
-    explanation: "This is a characterization used by human rights organizations, UN officials, and observers to describe the conditions of the 17-year blockade. It's a political statement but based on documented restrictions.",
+    explanation: "A common description used by rights groups and UN officials. It's political, sure—but it rests on years of documented restrictions and data.",
     indicators: ["Used by human rights organizations", "Describes documented conditions", "Widely verified restrictions"]
   },
   {
     id: 6,
     statement: "Israel withdrew from Gaza in 2005, so there is no occupation. Any problems are Hamas's fault.",
     isHasbara: true,
-    explanation: "This talking point ignores that Israel maintains control over Gaza's borders, airspace, waters, population registry, and economy. International law and the UN still consider Gaza occupied. This framing absolves Israel of responsibility.",
+    explanation: "The 2005 withdrawal didn’t end control. Borders, air, sea, population registry, economy—Israel still runs them. Calling that 'not occupation' is PR.",
     indicators: ["Selective facts", "Ignores continued control", "Absolves responsibility", "Official talking point"]
   },
   {
     id: 7,
     statement: "Palestinians celebrated in the streets after 9/11.",
     isHasbara: true,
-    explanation: "This is a propaganda narrative based on a small, decontextualized clip shown repeatedly. It's used to paint Palestinians as inherently hateful, ignoring that Yasser Arafat condemned the attacks and Palestinians donated blood for victims.",
+    explanation: "This trope leans on a tiny, decontextualized clip to smear a whole people. It erases the record—Arafat condemned 9/11, Palestinians donated blood.",
     indicators: ["Decontextualized imagery", "Generalizes entire population", "Ignores contradicting evidence", "Appeals to post-9/11 fears"]
   },
   {
     id: 8,
     statement: "Amnesty International and Human Rights Watch have both published reports documenting Israeli apartheid.",
     isHasbara: false,
-    explanation: "This is a verifiable fact. Multiple international human rights organizations have published detailed reports concluding that Israel practices apartheid. One can disagree with their conclusions, but the existence of the reports is factual.",
+    explanation: "You can argue the conclusions, but the reports exist. That's a verifiable fact from multiple independent orgs.",
     indicators: ["Verifiable fact", "Multiple independent sources", "Detailed documentation"]
   },
   {
     id: 9,
     statement: "If Palestinians would just stop teaching their children to hate, there would be peace.",
     isHasbara: true,
-    explanation: "This orientalist narrative places sole responsibility on Palestinians while ignoring the occupation, Israeli military education, settler violence, and structural oppression. It suggests the problem is cultural rather than political.",
+    explanation: "Blames a culture, not a system. It ignores occupation, military indoctrination, and settler violence, and turns politics into a morality play.",
     indicators: ["One-sided blame", "Cultural essentialism", "Ignores structural issues", "Infantilizes Palestinians"]
   },
   {
     id: 10,
     statement: "This conflict is complicated and has been going on for thousands of years.",
     isHasbara: true,
-    explanation: "While often said with good intentions, this is a hasbara talking point. The Israeli-Palestinian conflict began in the 20th century with Zionist colonization. Framing it as ancient and incomprehensible obscures clear historical facts and present realities.",
+    explanation: "Saying it’s ancient and 'too complicated' is a way to switch off thinking. This is a modern, 20th‑century political project—don’t mystify it.",
     indicators: ["False historical framing", "Creates confusion", "Discourages learning", "Deflects from current policies"]
   }
 ];
