@@ -91,7 +91,7 @@ export default function Landing() {
             </p>
             <p>
               <EditableText
-                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power.'s actions, particularly in Gaza, through the lens of Orwell's warnings about language and power."
+                value="This exhibit explores the propaganda techniques used to shape public perception of Israel's actions, particularly their genocide in Gaza, through the lens of Orwell's warnings about language and power."
                 storageKey="landing-para-3"
                 className="text-orwell-light"
                 tag="span"
